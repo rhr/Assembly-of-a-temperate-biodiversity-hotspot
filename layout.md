@@ -1,5 +1,6 @@
 introduction.tex
 section_Materials_and_Methods_subsection__.tex
 section_Results_subsection_Contrasting_histories__.tex
+figures/figure_cumulative_events/figure_cumulative_events.png
 section_Discussion_Our_analysis_is__.tex
 section_Conclusions__.tex
