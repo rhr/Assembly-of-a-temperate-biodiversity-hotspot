@@ -4,6 +4,6 @@ Results.tex
 figures/figure_cumulative_events/figure_cumulative_events.png
 figures/figure_speciation_rates/figure_speciation_rates.png
 figures/figure_dispersal_rates/figure_dispersal_rates.png
-section_Discussion_Our_analysis_is__.tex
-section_Conclusions__.tex
-subsection_Index_of_supporting_information__.tex
+Discussion.tex
+Conclusions.tex
+Index_of_supporting_information.tex
