@@ -1,6 +1,6 @@
 introduction.tex
 Materials_and_Methods.tex
-section_Results_subsection_Contrasting_histories__.tex
+Results.tex
 figures/figure_cumulative_events/figure_cumulative_events.png
 figures/figure_speciation_rates/figure_speciation_rates.png
 figures/figure_dispersal_rates/figure_dispersal_rates.png
