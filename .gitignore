@@ -1,0 +1,8 @@
+auto/*
+*.el
+*.aux
+*.bbl
+*.blg
+*.log
+*.pdf
+*~
