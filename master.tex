@@ -4,9 +4,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
-\usepackage{sidecap}
+\usepackage{caption}
+\captionsetup[figure]{justification=raggedright,labelfont=bf}
 \usepackage{fullpage} % 1" margins
-\parindent 0.5in
 \usepackage{setspace}
 \setstretch{1.5}
 %\usepackage{lineno}
@@ -15,9 +15,9 @@
 %\subsectionfont{\nohang\centering\normalsize\rm\em}
 
 % eat the colon so figures are labeled but have blank captions
-\makeatletter
-\renewcommand\fnum@figure[1]{\figurename~\thefigure\ignorespaces}
-\makeatother
+% \makeatletter
+% \renewcommand\fnum@figure[1]{\figurename~\thefigure\ignorespaces}
+% \makeatother
 
 %% Article
 \begin{document}
@@ -27,7 +27,31 @@
 \input{introduction}
 \input{Materials_and_Methods}
 \input{Results}
-\input{Discussion}
+%\input{Discussion}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.99\textwidth]{figures/figure_cumulative_events/figure_cumulative_events.pdf}
+\end{center}
+\caption{Assembly of regional floras by colonization and \textit{in situ} speciation events in 18 plant clades, inferred from ancestral-range reconstructions on time-calibrated molecular phylogenies. Shaded regions indicate the 5--95\% quantile intervals for the cumulative number of events through time from 500 pseudoreplicated joint biogeographic histories designed to account for phylogenetic uncertainty (see text). Panels on the right focus on the last 20 Ma, in which differences in regional assembly are most apparent. In the Hengduan Mountains region, cumulative \textit{in situ} speciation overtakes colonization about 8 Ma, whereas for the Himalayas-QTP, colonization remains the dominant process. \textit{In situ} speciation thus appears to have played a disproportionately large role in assembling the Hengduan Mountains flora since the late Miocene compared to the Himalayas-QTP, consistent with the theory of uplift-driven diversification in the Hengduan Mountains region.}
+\label{fig:cumevents}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.99\textwidth]{figures/figure_speciation_rates/figure_speciation_rates.pdf}
+\end{center}
+\caption{Rolling estimates of \textit{in situ} speciation rates through time for the Hengduan Mountains and Himalayas-QTP regions from inferred biogeographic histories of 18 plant clades. Lines indicate medians and shaded areas indicate 5--95\% quantile intervals from 500 pseudoreplicated joint histories designed to account for phylogenetic uncertainty (see text). Regional rates begin to diverge about 8 Ma, with the Hengduan Mountains showing a striking increase in \textit{in situ} speciation relative to the Himalayas-QTP.}
+\label{fig:speciation}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.99\textwidth]{figures/figure_dispersal_rates/figure_dispersal_rates.pdf}
+\end{center}
+\caption{Rolling estimates of colonization rates through time for the Hengduan Mountains, Himalayas-QTP, and temperate/boreal East Asia regions from inferred biogeographic histories of 18 plant clades. Lines indicate medians and shaded areas indicate 5–95\% quantile intervals from 500 pseudoreplicated joint histories designed to account for phylogenetic uncertainty (see text). Dispersal between the Hengduan Mountains and Himalayas-QTP increases in the last 2 Ma relative to dispersal between either region and temperate/boreal East Asia.}
+\label{fig:dispersal}
+\end{figure}
 
 \bibliography{bibliography/biblio}
 \bibliographystyle{ecol_let}
