@@ -4,6 +4,7 @@ Results.tex
 figures/figure_cumulative_events/figure_cumulative_events.png
 figures/figure_speciation_rates/figure_speciation_rates.png
 figures/figure_dispersal_rates/figure_dispersal_rates.png
+figures/Rhododendron-supfig/Rhododendron-supfig.png
 Discussion.tex
 Conclusions.tex
 Index_of_supporting_information.tex
