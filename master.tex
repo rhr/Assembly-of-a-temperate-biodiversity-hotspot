@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{natbib}
+\usepackage[square,sort,comma,numbers]{natbib}
 \usepackage{times}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -7,6 +7,8 @@
 \usepackage{caption}
 \captionsetup[figure]{justification=raggedright,labelfont=bf}
 \usepackage{fullpage} % 1" margins
+\usepackage{tabu}
+\usepackage{pdflscape}
 \usepackage{setspace}
 \setstretch{1.5}
 %\usepackage{lineno}
@@ -24,13 +26,49 @@
 \raggedright
 \parindent 0.5in
 
+\title{Uplift-driven diversification in the Hengduan Mountains, a
+  temperate hotspot of biodiversity}
+
+\date{Yaowu Xing$^{1,2}$ and Richard H.\ Ree$^{1,3,*}$}
+\maketitle
+
+\noindent Author affiliations:
+\begin{enumerate}
+
+\item Integrative Research Center, The Field Museum, 1400 South Lake Shore Drive, Chicago, Illinois 60605, USA
+
+\item Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences, Menglun Township, Mengla County, Yunnan 666303, China %Tel: +86 691 8715071
+
+\item National Institute of Ecology, 1210 Geumgang-ro, Maseo-myeon, Seocheon-gun, Chungcheongnam-do, South Korea
+
+\end{enumerate}
+
+\noindent * Corresponding author. Email: rree@fieldmuseum.org; +1-312-665-7857
+
+\bigskip
+
+\noindent Short title: Uplift-driven diversification in the Hengduan Mountains
+%\noindent Short title: Tempo and mode in biodiversity hotspot assembly
+
+\noindent Classification: Biological Sciences; Evolution
+
+
+\newpage
+
+\input{abstract}
+
+\newpage
+
 \input{introduction}
-\input{Materials_and_Methods}
 \input{Results}
 \input{Discussion}
+\input{Materials_and_Methods}
 
 \bibliography{bibliography/biblio}
-\bibliographystyle{ecol_let}
+%\bibliographystyle{ecol_let}
+\bibliographystyle{pnas2011}
+
+\input{table1}
 
 \begin{figure}
 \begin{center}
