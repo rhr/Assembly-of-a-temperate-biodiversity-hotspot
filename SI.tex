@@ -12,7 +12,7 @@
 \usepackage{tabu}
 \usepackage{xcolor}
 \usepackage[backgroundcolor=yellow!30,bordercolor=yellow!30,textsize=small,textwidth=4cm]{todonotes}
-\usepackage[unicode=true,hidelinks]{hyperref}
+\usepackage[unicode=true,colorlinks=true,urlcolor=blue,citecolor=black]{hyperref}
 % \usepackage[top=2.5cm, bottom=2.5cm, outer=6cm, inner=1cm, heightrounded, marginparwidth=5cm, marginparsep=1cm]{geometry}
 \usepackage[letterpaper,left=1.5cm,right=5cm]{geometry}
 %\usepackage{sectsty}
@@ -88,9 +88,9 @@ containing order Asparagales \citep{Chen2013}.
 
 \begin{enumerate}
 
-\item \textbf{Root (crown age of Amaryllidaceae):} 42.0--61.7
-  Ma. The bounds equal the 95\% highest posterior density (HPD)
-  interval of the crown age of Amaryllidaceae from \cite{Chen2013}.
+\item \textbf{Root age (crown of Amaryllidaceae):} 42.0--61.7 Ma. The
+  bounds equal the 95\% highest posterior density (HPD) interval of
+  the crown age of Amaryllidaceae from \cite{Chen2013}.
 
 \item \textbf{Crown age of Allioideae:} 27.8--44.5 Ma. The bounds
   equal the 95\% HPD interval of the crown age of Allioideae from
@@ -473,51 +473,52 @@ Eocene Florissant Formation \citep{Manchester2001}. It was used to
 constrain the minimum age of the stem Rosa. The age range was set to
 34--125 Myr.
 
-Clade 17: Acer (Sapindaceae)
+\subsubsection*{Clade 17. Ingroup: \textit{Acer}; outgroup context:
+  Sapindaceae}
 
-Root (Split between Acer and Dipteronia): The split between Acer and
-Dipteronia was calibrated using the earliest fossil Dipteronia
-\citep{McClain2001}. The fossil record of Dipteronia was well reviewed
-by McClain and Manchester \citep{McClain2001} based on diagnostic
-winged fruits. We use the earliest Dipteronia fossil from the
-Paleocene North America to constrain the minimum age of the root. The
-maximum age was set to 125 Ma.
+The analysis included 118 ingroup species and 2 outgroups,
+\textit{Dipteronia dyeriana} and \textit{D.~sinensis}.
 
-Crown of Acer: The genus Acer has a rich fossil record dates back at
-least to Paleocene and Eocene \citep{Wolfe1987,Mai1995}. The first
-fossil samaras possibly assignable to section Acer are reported from
-the latest Early Eocene of North America \citep{Wolfe1987}. We use it
-to constrain the minimum age the genus Acer and the maximum age was
-set to 125 Ma.
+\begin{enumerate}
 
-Clade 18: Saxifragaceae + Grossulariaceae
+\item \textbf{Stem age of \textit{Dipteronia}:} 60--125 Ma. The
+  minimum bound is based on the earliest fossil of
+  \textit{Dipteronia}, winged fruits from the Paleocene of North
+  America \citep{McClain2001}. {\color{red}The maximum age was set to
+    125 Ma}\fntodo{why?}.
 
-We selected five species of Itea and one species of Pterostemon from
-Saxifragales as outgroups. 
+\item \textbf{Crown age of Acer:} 47.8--125 Ma. \textit{Acer} has a
+  rich fossil record, dating to at least the Paleocene
+  \citep{Wolfe1987,Mai1995}. We based the minimum bound on the crown
+  age on the first fossil samaras assignable to \textit{Acer} section
+  \textit{Acer}, from the latest Early Eocene of North America
+  \citep{Wolfe1987}. {\color{red}The maximum age was set to 125 Ma}.
 
-Root: We set the minimum age of the root using the Upper Cretaceous
-fossil (Turonian, ca. 90 Myr), Divisestylus \citep{Hermsen2003}. The
-phylogenetic position of Divisestylus has been demonstrated based on
-well preserved morphological characters of flowers and fruits that it
-shows clear affinity to Iteaceae \citep{Hermsen2003}. As it represents
-the oldest fossil for Iteaceae + Saxifragaceae and cannot be assigned
-to extant Iteaceae, we used it constrain the root of the
-phylogeny. The age range of the root was set to 90--125 Myr.
+\end{enumerate}
 
-Stem of Itea: The fossil record of Iteaceae and Grossulariaceae and
-their phylogenetic positions have been well reviewed by Hermsen
-\citep{Hermsen2013}. Following her arguments, we used the earliest
-fossil pollen assigned to Itea (49 Myr) to constrain the minimum age
-of the stem of Itea. The stem age range of Itea was set to 49--125
-Myr.
+\subsubsection*{Clade 18: Ingroup: Saxifragaceae + Grossulariaceae;
+  outgroup context: Saxifragales}
 
-Stem of Ribes: The earliest uncontroversial fossil leaves assigned to
-Ribes axelrodii from the Eocene Bull Run floras (approximately 42 Myr)
-was used to constrain the minimum age of the stem of Ribes
-\citep{Hermsen2005}. The stem age range of Ribes was set to 42--125
-Myr.
+The analysis included 313 ingroup species and five species of
+\textit{Itea} and one species of \textit{Pterostemon} as outgroups.
 
-2. Biogeographical range scoring
+\begin{enumerate}
+\item \textbf{Root age (crown Saxifragales):} 90--125 Ma. The minimum
+  bound is based on the Turonian fossil \textit{Divisestylus}, which
+  shows flowers and fruits with well-preserved morphological
+  characters that indicate a clear affinity to Iteaceae
+  \citep{Hermsen2003}.
+
+\item \textbf{Stem age of \textit{Itea}:} 49--125 Ma. The minimum
+  bound is based on the earliest fossil pollen assigned to \emph{Itea}
+  \citep{Hermsen2013}.
+
+\item \textbf{Stem of Ribes:} 42--125 Ma. The minimum bound is based
+  on the earliest uncontroversial fossil leaves assigned to
+  \textit{Ribes axelrodii} from the Eocene Bull Run floras \citep{Hermsen2005}.
+\end{enumerate}
+
+\subsection*{Biogeographical range scoring}
 
 Data matrices for the geographic ranges of species sampled in the
 studies clades were assembled mainly based on the online eFloras and
@@ -538,7 +539,7 @@ dataset of distributions ranges for species included in Vascular
 Plants of the Hengduan Mountains compiled by Zhang et
 al. \citep{Zhang2009}, and Wu \citep{Wu2008}.
 
-3. Ancestral regions reconstruction
+\subsection*{Ancestral regions reconstruction}
 
 \bibliography{SI-refs}
 \bibliographystyle{ecol_let}
