@@ -14,7 +14,7 @@
 \usepackage[backgroundcolor=yellow!30,bordercolor=yellow!30,textsize=small,textwidth=4cm]{todonotes}
 \usepackage[unicode=true,colorlinks=true,urlcolor=blue,citecolor=black]{hyperref}
 % \usepackage[top=2.5cm, bottom=2.5cm, outer=6cm, inner=1cm, heightrounded, marginparwidth=5cm, marginparsep=1cm]{geometry}
-\usepackage[letterpaper,left=1.5cm,right=5cm]{geometry}
+%\usepackage[letterpaper,left=1.5cm,right=5cm]{geometry}
 %\usepackage{sectsty}
 %\sectionfont{\nohang\centering\normalsize\sc}   % capitalize initial letters
 %\subsectionfont{\nohang\centering\normalsize\rm\em}
@@ -76,14 +76,24 @@ Below we list and explain the node age constraints used in calibrating
 the divergence-time analyses in BEAST. For each analysis, the ingroup
 is the taxon for which divergence times and ancestral geographic
 ranges were reconstructed; the ``outgroup scope'' is the
-least-inclusive taxon containing the ingroup and outgroup taxa. Unless
-otherwise noted, the age ranges are the bounds of a uniform prior
-distribution, and the nodes in question were topologically constrained
-to be monophyletic. Included in the list are fossil-calibrated
-``backbone'' analyses that we ran to derive secondary calibrations for
-some ingroups.
+least-inclusive taxon containing the ingroup and outgroup
+taxa. Included in the list are fossil-calibrated ``backbone'' analyses
+that we ran to derive secondary calibrations for some ingroups. A
+spreadsheet containing taxon-by-gene tables of Genbank accession
+numbers for all analyses is available as Dataset S2. {\color{red}Note
+  to editor: BEAST XML files (containing the aligned sequence data,
+  Bayesian priors, and analysis directives) and the results (maximum
+  clade-credibility trees) can be provided as SI or via Dryad.}
 
-\subsubsection*{Clade 1. Ingroup: \textit{Allium}; outgroup scope:
+Unless otherwise noted, the age ranges are the bounds of a uniform
+prior distribution, and the nodes in question were topologically
+constrained to be monophyletic. Wherever possible, we used fossils to
+set the minimum (lower) bounds for these priors. For eudicot
+angiosperm nodes, we set the upper (older) bound to 125 Ma, the age of
+the earliest eudicot fossil \citep{Hughes1994}, if no other evidence
+was available for a younger constraint.
+
+\subsubsection*{Ingroup: \textit{Allium}; outgroup scope:
   Amaryllidaceae}
 
 % \todo[inline]{Need a spreadsheet showing the taxa and genes (accession
@@ -108,14 +118,14 @@ containing order Asparagales \citep{Chen2013}.
 
 \end{enumerate}
 
-\subsubsection*{Backbone: Asteraceae}
+\subsubsection*{Backbone: Asteraceae; outgroup scope: Asterales}
 
-We ran this analysis to derive secondary calibrations for clade 2, the
-\textit{Ligularia-Cremanthodium-Parasenecio} complex, and clade 3,
-\textit{Saussurea}, both of which lack fossils. The backbone tree
-included 499 genera of Asteraceae and four outgroup genera of
-Calyceraceae. Each genus was represented by one species. We calibrated
-the analysis using the following node-age constraints.
+This analysis was run to derive secondary calibrations for the
+\textit{Ligularia-Cremanthodium-Parasenecio} complex and
+\textit{Saussurea}, both of which lack fossils.% The backbone tree
+% included 499 genera of Asteraceae and four outgroup genera of
+% Calyceraceae. Each genus was represented by one species. We calibrated
+% the analysis using the following node-age constraints.
 
 % ?? calibrations as table?
 % columns: clade, node, distribution--e.g. uniform(x, y), reasoning -
@@ -172,12 +182,13 @@ the analysis using the following node-age constraints.
 
 \end{enumerate}
 
-\noindent We used 95\% HPD intervals for node ages in the backbone
-tree as secondary calibrations for the
+\noindent The constraints for the
 \textit{Ligularia-Cremanthodium-Parasenecio} complex and
-\textit{Saussurea} as described below.
+\textit{Saussurea} below are based on 95\% HPD intervals inferred from
+this backbone.
 
-\subsubsection*{Clade 2. \textit{Ligularia-Cremanthodium-Parasenecio} complex}
+\subsubsection*{Ingroup: \textit{Ligularia-Cremanthodium-Parasenecio}
+  complex; outgroup scope: Tussilagininae}
 
 \begin{enumerate}
 
@@ -190,13 +201,15 @@ tree as secondary calibrations for the
 
 \end{enumerate}
 
-\subsubsection*{Clade 3. \textit{Saussurea}}
+\subsubsection*{Ingroup: \textit{Saussurea}; outgroup scope:
+  Cardueae}
 
 \begin{enumerate}
 \item \textbf{Root age:} 2.27--13.98 Ma. % INGROUP??
 \end{enumerate}
 
-\subsubsection*{Clade 4. Ingroup: \textit{Cyananthus}; outgroup scope: Campanulaceae}
+\subsubsection*{Ingroup: \textit{Cyananthus}; outgroup scope:
+  Campanulaceae}
 
 \begin{enumerate}
 
@@ -205,36 +218,22 @@ tree as secondary calibrations for the
   inferred in \cite{Magallon2015}.
 
 \item \textbf{Stem age of the most recent common ancestor of
-    \textit{Campanula pyramidalis} and \textit{C.~carpatica}:} 16.5--62
-  Ma. The bounds are based on fossils of \textit{C.~palaeopyramidalis}
-  \citep{Lancucka-Srodoniowa1979} which were evaluated as belonging to
-  \textit{C. pyramidalis} in \cite{Cellinese2009}.
+    \textit{Campanula pyramidalis} and \textit{C.~carpatica}:}
+  16.5--62 Ma. The bounds are based on fossils of
+  \textit{C.~palaeopyramidalis} \citep{Lancucka-Srodoniowa1979} which
+  were assigned to \textit{C. pyramidalis} in \cite{Cellinese2009}.
 \end{enumerate}
 
-\subsubsection{Clade 5. Ingroup: \textit{Rhodiola}; outgroup context:
-  Crassulaceae}
+\subsubsection*{Ingroup: \textit{Rhododendron}; outgroup context: Ericaceae}
 
-As no reliable fossils are available for Crassulaceae, we estimated
-divergence times in \textit{Rhodiola} in the context of
-Saxifragales. One hundred and seventy-one species from the
-Saxifragales were selected as outgroups. We applied the same fossil
-calibrations as Saxigragaceae and Grossulariaceae (detailed
-information see fossil calibrations for Saxifragaceae and
-Grossulariaceae).
-
-\subsubsection{Clade 6. Ingroup: \textit{Rhododendron}; outgroup context: Ericaceae}
-
-\smalltodo[inline]{This paragraph needs to be more clear}
-
-{\color{red}To incorporate more fossil calibrations, we selected several species
-from Empetrum, Enkianthus, Erica and Kalmia as outgroups.  We mainly
-use fossil calibrations for Ericaceae selected by Schwery et
-al. \citep{Schwery2015}. However, to be more conservative, we
-constrained the stem age rather than the crown age of Rhododendron
-using the earliest fossil of this genus. This because the earliest
-fossil cannot be assigned to any subgenus based on morphological
-characters. We applied the earliest fossil record of Ericaceae (89.8
-Myr) to be the maximum age of other calibrations in the Ericaceae.}
+% We used fossil calibrations for Ericaceae following
+% \citet{Schwery2015} with some modifications.
+% We constrained the stem
+% age rather than the crown age of Rhododendron using the earliest
+% fossil of this genus. This because the earliest fossil cannot be
+% assigned to any subgenus based on morphological characters. We applied
+% the earliest fossil record of Ericaceae (89.8 Myr) to be the maximum
+% age of other calibrations in the Ericaceae.
 
 \begin{enumerate}
 
@@ -245,22 +244,22 @@ Myr) to be the maximum age of other calibrations in the Ericaceae.}
 \item \textbf{Stem age of \textit{Rhododendron}:} 56--89.8 Ma. The
   lower bound is the earliest fossil record of the genus,
   \textit{R.~newburyanum} from the Paleocene of South England
-  \citep{Collinson1978}. The maximum is from constraint 1.
+  \citep{Collinson1978}. The upper bound is from constraint 1.
 
 \item \textbf{Stem age of \textit{Erica}:} 5.33--89.8 Ma. The lower
   bound is based on the earliest fossil record of the genus,
   \textit{E.~palaeoarborea} from the late Miocene of Europe
-  \citep{VanderBurgh1987}. The maximum is from constraint 1.
+  \citep{VanderBurgh1987}. The upper bound is from constraint 1.
 
 \item \textbf{Stem age of \textit{Empetrum}:} 11.62--89.8 Ma. The
   lower bound is based on the earliest fossil record of the genus,
-  from the middle Miocene of Denmark \citep{Friis1979}. The maximum is
-  from constraint 1.
+  from the middle Miocene of Denmark \citep{Friis1979}. The upper
+  bound is from constraint 1.
 
 \item \textbf{Stem age of \textit{Kalmia}:} 15.97--89.8 Ma. The lower
   bound is based on the earliest fossil record of the genus,
   \textit{K.~saxonica} from the early Miocene of Germany
-  \citep{VanderBurgh1987}. The maximum is from constraint 1.
+  \citep{VanderBurgh1987}. The upper bound is from constraint 1.
 
 \end{enumerate}
 
@@ -517,6 +516,14 @@ The analysis included 118 ingroup species and 2 outgroups,
   \citep{Wolfe1987}.
 
 \end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Rhodiola}; outgroup context:
+  Saxifragales}
+
+We inferred divergence times for \textit{Rhodiola} in the context of
+Saxifragales. We applied the same fossil calibrations as Saxigragaceae
+and Grossulariaceae (detailed information see fossil calibrations for
+Saxifragaceae and Grossulariaceae).
 
 \subsubsection*{Clade 18: Ingroup: Saxifragaceae + Grossulariaceae;
   outgroup context: Saxifragales}
