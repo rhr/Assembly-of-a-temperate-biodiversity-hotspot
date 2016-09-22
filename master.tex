@@ -1,16 +1,25 @@
-\documentclass[12pt]{article}
-\usepackage[square,sort,comma,numbers]{natbib}
-\usepackage{times}
+\documentclass[9pt,twocolumn,twoside,lineno]{pnas-new}
+% Use the lineno option to display guide line numbers if required.
+% Note that the use of elements such as single-column equations
+% may affect the guide line number alignment. 
+\templatetype{pnasresearcharticle} % Choose template 
+% {pnasresearcharticle} = Template for a two-column research article
+% {pnasmathematics} = Template for a one-column mathematics article
+% {pnasinvited} = Template for a PNAS invited submission
+
+%\documentclass[12pt]{article}
+%\usepackage[square,sort,comma,numbers]{natbib}
+%\usepackage{times}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[pdftex]{graphicx}
-\usepackage{caption}
-\captionsetup[figure]{justification=raggedright,labelfont=bf}
-\usepackage{fullpage} % 1" margins
+%\usepackage[pdftex]{graphicx}
+%\usepackage{caption}
+%\captionsetup[figure]{justification=raggedright,labelfont=bf}
+%\usepackage{fullpage} % 1" margins
 \usepackage{tabu}
 \usepackage{pdflscape}
-\usepackage{setspace}
-\setstretch{1.5}
+%\usepackage{setspace}
+%\setstretch{1.5}
 %\usepackage{lineno}
 %\usepackage{sectsty}
 %\sectionfont{\nohang\centering\normalsize\sc}   % capitalize initial letters
@@ -22,85 +31,225 @@
 % \makeatother
 
 %% Article
-\begin{document}
-\raggedright
-\parindent 0.5in
 
 \title{Uplift-driven diversification in the Hengduan Mountains, a
-  temperate hotspot of biodiversity}
+  temperate biodiversity hotspot}
 
-\date{Yaowu Xing$^{1,2}$ and Richard H.\ Ree$^{1,3,*}$}
+\author[a,b,1]{Yaowu Xing}
+\author[a,c,1]{Richard H.\ Ree} 
+% Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+\affil[a]{Integrative Research Center, The Field Museum, 1400 South
+  Lake Shore Drive, Chicago, Illinois 60605, USA}
+\affil[b]{Xishuangbanna Tropical Botanical Garden, Chinese Academy of
+  Sciences, Menglun Township, Mengla County, Yunnan 666303, China}
+\affil[c]{National Institute of Ecology, 1210 Geumgang-ro,
+  Maseo-myeon, Seocheon-gun, Chungcheongnam-do, South Korea}
+
+% Please give the surname of the lead author for the running footer
+\leadauthor{Xing} 
+
+\significancestatement{Why do so many species occur in mountains? A
+  popular but little-tested hypothesis is that tectonic uplift creates
+  environmental conditions (new habitats, dispersal barriers, etc.)
+  that increase the rate at which resident species divide and evolve
+  to form new ones. In China's Hengduan Mountains region, a
+  biodiversity hotspot where uplift began about 8 million years ago,
+  this rate does in fact show a significant increase since that time,
+  relative to the rate for adjacent older mountains, and to the rate
+  of species immigration. The Hengduan Mountains flora is thus made up
+  disproportionately of species that evolved within the region during
+  its uplift, supporting the original hypothesis and helping to
+  explain the prevalence of mountains in global biodiversity
+  hotspots.}
+
+%\date{Yaowu Xing$^{1,2}$ and Richard H.\ Ree$^{1,3,*}$}
+
+\authorcontributions{Y.X. and R.R. designed the research; Y.X. collected the
+  data; Y.X. and R.R. analyzed the data; and Y.X. and R.R. wrote the paper.}
+
+\authordeclaration{The authors declare no conflicts of interest.}
+
+\equalauthors{\textsuperscript{1}Y.X. and R.R. contributed equally to this work.}
+
+\correspondingauthor{\textsuperscript{2}To whom correspondence should be addressed. E-mail: rree\@fieldmuseum.org}
+
+\keywords{ biogeography $|$ vascular plants $|$ molecular clocks $|$ dispersal $|$ speciation }
+
+\begin{abstract}
+A common hypothesis for the rich biodiversity found in mountains is
+uplift-driven diversification---that orogeny creates conditions
+favoring rapid \textit{in situ} speciation of resident lineages. We
+tested this hypothesis in the context of the Qinghai-Tibetan Plateau
+(QTP) and adjoining mountain ranges, using the phylogenetic and
+geographic histories of multiple groups of plants to infer the tempo
+(rate) and mode (colonization vs.\ \textit{in situ} diversification)
+of biotic assembly through time and across regions. We focused on the
+Hengduan Mountains region, which in comparison to the QTP and
+Himalayas was uplifted more recently (since the late Miocene), is
+smaller in area, and richer in species. The time-calibrated
+phylogenetic analyses, which made no prior assumptions about the
+timing of uplift, showed that about 8 million years ago, the rate of
+\textit{in situ} diversification increased in the Hengduan Mountains,
+significantly exceeding that in the geologically older QTP and
+Himalayas, and marked the point at which cumulative speciation
+overtook colonization. By contrast, in the QTP and Himalayas during
+the same period, the rate of \textit{in situ} diversification remained
+relatively flat, with colonization dominating lineage
+accumulation. The Hengduan Mountains flora was thus assembled
+disproportionately by recent \textit{in situ} diversification,
+temporally congruent with independent estimates of orogeny, providing
+the first quantitative evidence supporting the uplift-driven
+diversification hypothesis.
+\end{abstract}
+
+\dates{This manuscript was compiled on \today}
+\doi{\url{www.pnas.org/cgi/doi/10.1073/pnas.XXXXXXXXXX}}
+
+\begin{document}
+% \raggedright
+% \parindent 0.5in
+
+% Optional adjustment to line up main text (after abstract) of first page with line numbers, when using both lineno and twocolumn options.
+% You should only change this length when you've finalised the article contents.
+\verticaladjustment{-2pt}
+
 \maketitle
 
-\noindent Author affiliations:
-\begin{enumerate}
-
-\item Integrative Research Center, The Field Museum, 1400 South Lake Shore Drive, Chicago, Illinois 60605, USA
-
-\item Xishuangbanna Tropical Botanical Garden, Chinese Academy of Sciences, Menglun Township, Mengla County, Yunnan 666303, China %Tel: +86 691 8715071
-
-\item National Institute of Ecology, 1210 Geumgang-ro, Maseo-myeon, Seocheon-gun, Chungcheongnam-do, South Korea
-
-\end{enumerate}
-
-\noindent * Corresponding author. Email: rree@fieldmuseum.org; +1-312-665-7857
-
-\bigskip
-
-\noindent Short title: Uplift-driven diversification in the Hengduan Mountains
-%\noindent Short title: Tempo and mode in biodiversity hotspot assembly
-
-\noindent Classification: Biological Sciences; Evolution
+\thispagestyle{firststyle}
+\ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
 
-\newpage
+% \noindent Author affiliations:
+% \begin{enumerate}
 
-\input{abstract}
+% \item Integrative Research Center, The Field Museum, 1400 South Lake
+%   Shore Drive, Chicago, Illinois 60605, USA
 
-\newpage
+% \item Xishuangbanna Tropical Botanical Garden, Chinese Academy of
+%   Sciences, Menglun Township, Mengla County, Yunnan 666303,
+%   China %Tel: +86 691 8715071
+
+% \item National Institute of Ecology, 1210 Geumgang-ro, Maseo-myeon,
+%   Seocheon-gun, Chungcheongnam-do, South Korea
+
+% \end{enumerate}
+
+% \noindent * Corresponding author. Email: rree@fieldmuseum.org; +1-312-665-7857
+
+% \bigskip
+
+% \noindent Short title: Uplift-driven diversification in the Hengduan Mountains
+% %\noindent Short title: Tempo and mode in biodiversity hotspot assembly
+
+% \noindent Classification: Biological Sciences; Evolution
+
+
+% \newpage
+% \input{abstract}
+% \newpage
 
 \input{introduction}
 \input{Results}
 \input{Discussion}
-\input{Materials_and_Methods}
+%\input{Materials_and_Methods}
 
-\bibliography{bibliography/biblio}
-%\bibliographystyle{ecol_let}
-\bibliographystyle{pnas2011}
 
 \input{table1}
 
 \begin{figure}
-\begin{center}
-\includegraphics[width=.99\textwidth]{figures/figure_cumulative_events/figure_cumulative_events.pdf}
-\end{center}
-\caption{Assembly of regional floras by colonization and \textit{in situ} speciation events in 18 plant clades, inferred from ancestral-range reconstructions on time-calibrated molecular phylogenies. Shaded regions indicate the 5--95\% quantile intervals for the cumulative number of events through time from 500 pseudoreplicated joint biogeographic histories designed to account for phylogenetic uncertainty (see text). Panels on the right focus on the last 20 Ma, in which differences in regional assembly are most apparent. In the Hengduan Mountains region, cumulative \textit{in situ} speciation overtakes colonization about 8 Ma, whereas for the Himalayas-QTP, colonization remains the dominant process. \textit{In situ} speciation thus appears to have played a disproportionately large role in assembling the Hengduan Mountains flora since the late Miocene compared to the Himalayas-QTP, consistent with the theory of uplift-driven diversification in the Hengduan Mountains region.}
+\centering
+\includegraphics[width=.99\linewidth]{figures/figure_cumulative_events/figure_cumulative_events.pdf}
+\caption{Assembly of regional floras by colonization and \textit{in
+    situ} speciation events in 18 plant clades, inferred from
+  ancestral-range reconstructions on time-calibrated molecular
+  phylogenies. Shaded regions indicate the 5--95\% quantile intervals
+  for the cumulative number of events through time from 500
+  pseudoreplicated joint biogeographic histories designed to account
+  for phylogenetic uncertainty (see text). Panels on the right focus
+  on the last 20 Ma, in which differences in regional assembly are
+  most apparent. In the Hengduan Mountains region, cumulative
+  \textit{in situ} speciation overtakes colonization about 8 Ma,
+  whereas for the Himalayas-QTP, colonization remains the dominant
+  process. \textit{In situ} speciation thus appears to have played a
+  disproportionately large role in assembling the Hengduan Mountains
+  flora since the late Miocene compared to the Himalayas-QTP,
+  consistent with the theory of uplift-driven diversification in the
+  Hengduan Mountains region.}
 \label{fig:cumevents}
 \end{figure}
 
 \begin{figure}
-\begin{center}
-\includegraphics[width=.99\textwidth]{figures/figure_speciation_rates/figure_speciation_rates.pdf}
-\end{center}
-\caption{Rolling estimates of \textit{in situ} speciation rates through time for the Hengduan Mountains and Himalayas-QTP regions from inferred biogeographic histories of 18 plant clades. Lines indicate medians and shaded areas indicate 5--95\% quantile intervals from 500 pseudoreplicated joint histories designed to account for phylogenetic uncertainty (see text). Regional rates begin to diverge about 8 Ma, with the Hengduan Mountains showing a striking increase in \textit{in situ} speciation relative to the Himalayas-QTP.}
+\centering
+\includegraphics[width=.99\linewidth]{figures/figure_speciation_rates/figure_speciation_rates.pdf}
+\caption{Rolling estimates of \textit{in situ} speciation rates
+  through time for the Hengduan Mountains and Himalayas-QTP regions
+  from inferred biogeographic histories of 18 plant clades. Lines
+  indicate medians and shaded areas indicate 5--95\% quantile
+  intervals from 500 pseudoreplicated joint histories designed to
+  account for phylogenetic uncertainty (see text). Regional rates
+  begin to diverge about 8 Ma, with the Hengduan Mountains showing a
+  striking increase in \textit{in situ} speciation relative to the
+  Himalayas-QTP.}
 \label{fig:speciation}
 \end{figure}
 
 \begin{figure}
-\begin{center}
-\includegraphics[width=.99\textwidth]{figures/figure_dispersal_rates/figure_dispersal_rates.pdf}
-\end{center}
-\caption{Rolling estimates of colonization rates through time for the Hengduan Mountains, Himalayas-QTP, and temperate/boreal East Asia regions from inferred biogeographic histories of 18 plant clades. Lines indicate medians and shaded areas indicate 5–95\% quantile intervals from 500 pseudoreplicated joint histories designed to account for phylogenetic uncertainty (see text). Dispersal between the Hengduan Mountains and Himalayas-QTP increases in the last 2 Ma relative to dispersal between either region and temperate/boreal East Asia.}
+\centering
+\includegraphics[width=.99\linewidth]{figures/figure_dispersal_rates/figure_dispersal_rates.pdf}
+\caption{Rolling estimates of colonization rates through time for the
+  Hengduan Mountains, Himalayas-QTP, and temperate/boreal East Asia
+  regions from inferred biogeographic histories of 18 plant
+  clades. Lines indicate medians and shaded areas indicate 5–95\%
+  quantile intervals from 500 pseudoreplicated joint histories
+  designed to account for phylogenetic uncertainty (see
+  text). Dispersal between the Hengduan Mountains and Himalayas-QTP
+  increases in the last 2 Ma relative to dispersal between either
+  region and temperate/boreal East Asia.}
 \label{fig:dispersal}
 \end{figure}
 
 \begin{figure}
-\begin{center}
-\includegraphics[width=.99\textwidth]{figures/Rhododendron-supfig/Rhododendron-supfig.pdf}
-\end{center}
-\caption{Reconstructions of ancestral geographic range (left) and net diversification rate (right) on the maximum clade credibility tree, with branch lengths set to posterior means, for \textit{Rhododendron}. Ancestral ranges are maximum-likelihood estimates at the start and end of each branch. Net diversification values are branch-segment means of the posterior distribution estimated by BAMM. Filled circles on the right indicate branches that appear in the 95\% credible set of distinct shift configurations, with the size and label of a circle indicating the cumulative probability of the branch over all configurations in the credible set. On the left, the marginal odds ratio for a shift in diversification regime along a branch is drawn for branches where the ratio exceeds 20. Geographic regions are coded as follows: HEN, Hengduan Mountains; HIM, Himalayas-QTP; EAS, temperate-boreal East Asia; SEA, Southeast Asia; CWA, central/western Asia; EUR, Europe; IND, India; AFR, Africa; NAM, North America; SAM, South America; AUS, Australasia. Hengduan species cluster primarily in 2 clades, both of which show evidence of ancestral shifts to higher diversification rate in the mid-to-late Miocene.}
+\centering
+\includegraphics[width=.99\linewidth]{figures/Rhododendron-supfig/Rhododendron-supfig.pdf}
+\caption{Reconstructions of ancestral geographic range (left) and net
+  diversification rate (right) on the maximum clade credibility tree,
+  with branch lengths set to posterior means, for
+  \textit{Rhododendron}. Ancestral ranges are maximum-likelihood
+  estimates at the start and end of each branch. Net diversification
+  values are branch-segment means of the posterior distribution
+  estimated by BAMM. Filled circles on the right indicate branches
+  that appear in the 95\% credible set of distinct shift
+  configurations, with the size and label of a circle indicating the
+  cumulative probability of the branch over all configurations in the
+  credible set. On the left, the marginal odds ratio for a shift in
+  diversification regime along a branch is drawn for branches where
+  the ratio exceeds 20. Geographic regions are coded as follows: HEN,
+  Hengduan Mountains; HIM, Himalayas-QTP; EAS, temperate-boreal East
+  Asia; SEA, Southeast Asia; CWA, central/western Asia; EUR, Europe;
+  IND, India; AFR, Africa; NAM, North America; SAM, South America;
+  AUS, Australasia. Hengduan species cluster primarily in 2 clades,
+  both of which show evidence of ancestral shifts to higher
+  diversification rate in the mid-to-late Miocene.}
 \label{fig:rhododendron}
 \end{figure}
+
+\input{pnas_methods}
+
+\acknow{Y.X.\ was supported by the Boyd Postdoctoral Fellowship at the
+  Field Museum and by the Swiss National Science Foundation
+  (XXXXX?). The authors thank D.~Boufford for comments on a draft.}
+
+\showacknow % Display the acknowledgments section
+
+
+% \pnasbreak splits and balances the columns before the references.
+% If you see unexpected formatting errors, try commenting out this line
+% as it can run into problems with floats and footnotes on the final page.
+\pnasbreak
+
+\bibliography{bibliography/biblio}
+%\bibliographystyle{ecol_let}
+%\bibliographystyle{pnas2011}
 
 \end{document}
 

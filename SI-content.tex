@@ -1,0 +1,527 @@
+\section*{Supporting Information}
+
+\subsection*{Molecular dating: calibrations and topological constraints}
+
+% \noindent We followed three general guidelines in calibrating the
+% divergence-time analyses with node age constraints. All were intended
+% to be conservative with respect to constraining the maximum age of any
+% given clade.
+
+% \begin{enumerate}
+
+% \item We used the earliest confirmed fossil record of a group to
+%   constrain its minimum \textit{stem} age; most fossil species are
+%   published based on fragmentary material that lack enough characters
+%   to be placed within the crown group.
+
+% \item We applied uniform priors to all calibrations.% , despite the
+%   % effect of inferred node age confidence intervals being larger than
+%   % for other commonly-used distributions, e.g.\ lognormal, exponential,
+%   % etc. We believe current knowledge on fossils only allow us to make
+%   % an assumption that one clade could originate at any time between the
+%   % minimum and maximum bounds.
+
+% \item We used 125 Myr, the age of the earliest eudicot fossil
+%   \citep{Hughes1994}, to constrain the maximum age of angiosperm
+%   clades in the absence of other evidence.
+% \end{enumerate}
+
+Below we list and explain the node age constraints used in calibrating
+the divergence-time analyses in BEAST. For each analysis, the ingroup
+is the taxon for which divergence times and ancestral geographic
+ranges were reconstructed; the ``outgroup scope'' is the
+least-inclusive taxon containing the ingroup and outgroup
+taxa. Included in the list are fossil-calibrated ``backbone'' analyses
+that we ran to derive secondary calibrations for some ingroups. A
+spreadsheet containing taxon-by-gene tables of Genbank accession
+numbers for all analyses is available as Dataset S2. {\color{red}Note
+  to editor: BEAST XML files (containing the aligned sequence data,
+  Bayesian priors, and analysis directives) and the results (maximum
+  clade-credibility trees) can be provided as SI or via Dryad.}
+
+Unless otherwise noted, the age ranges are the bounds of a uniform
+prior distribution, and the nodes in question were topologically
+constrained to be monophyletic. Wherever possible, we used fossils to
+set the minimum (lower) bounds for these priors. For eudicot
+angiosperm nodes, we set the upper (older) bound to 125 Ma, the age of
+the earliest eudicot fossil \citep{Hughes1994}, if no other evidence
+was available for a younger constraint.
+
+\subsubsection*{Ingroup: \textit{Allium}; outgroup scope:
+  Amaryllidaceae}
+
+% \todo[inline]{Need a spreadsheet showing the taxa and genes (accession
+%   numbers) used for each BEAST analysis}
+
+% \todo[inline]{Need to add information about topological constraints in
+%   addition to age constraints}
+
+\noindent There are no reliable fossils for Amaryllidaceae, so we used
+secondary calibrations from a fossil-calibrated study of the
+containing order Asparagales \citep{Chen2013}.
+
+\begin{enumerate}
+
+\item \textbf{Root (crown age of Amaryllidaceae):} 42.0--61.7 Ma. The
+  bounds equal the 95\% highest posterior density (HPD) interval of
+  the crown age of Amaryllidaceae from \cite{Chen2013}.
+
+\item \textbf{Crown age of Allioideae:} 27.8--44.5 Ma. The bounds
+  equal the 95\% HPD interval of the crown age of Allioideae from
+  \cite{Chen2013}.
+
+\end{enumerate}
+
+\subsubsection*{Backbone: Asteraceae; outgroup scope: Asterales}
+
+This analysis was run to derive secondary calibrations for the
+\textit{Ligularia-Cremanthodium-Parasenecio} complex and
+\textit{Saussurea}, both of which lack fossils.% The backbone tree
+% included 499 genera of Asteraceae and four outgroup genera of
+% Calyceraceae. Each genus was represented by one species. We calibrated
+% the analysis using the following node-age constraints.
+
+% ?? calibrations as table?
+% columns: clade, node, distribution--e.g. uniform(x, y), reasoning -
+% explain how the distribution was derived, with reference to fossils
+% or secondary calibrations, etc.
+
+\begin{enumerate}
+
+\item \textbf{Crown age of Asteraceae:} 72.1--125 Ma. The lower bound
+  is based on Cretaceous pollen of \textit{Tubulifloridites lilliei}
+  type A, which was used to constrain of the divergence time of
+  \textit{Barnadesia} and \textit{Dasyphyllum} in
+  \cite{Barreda2015}.
+
+\item \textbf{Stem age of Asteraceae excluding Barnadesieae and
+    \textit{Famatinanthus}:} 47.5--125 Ma. The lower bound is based
+  on \textit{Raiguenrayum cura}, an exceptionally well-preserved
+  capitulescence from the 47.5 Ma Huitrera Formation in Argentina
+  \citep{Barreda2010,Barreda2012} that shares a mosaic of
+  morphological characters with modern groups such as Stifftieae,
+  Mutisioideae sensu lato, and Carduoideae.
+
+\item \textbf{Stem age of Mutisieae:} 28.5--125 Ma. The lower bound
+  is based on the earliest unequivocal fossil pollen for Mutisieae,
+  \textit{Mutisiapollis patersonii}, from the early Oligocene of
+  Australia \citep{Macphail1994}. The pollen is similar to that of
+  some extant species in \textit{Chaetanthera} and \textit{Mutisia},
+  however, it cannot be clearly placed within any extant genus.
+
+\item \textbf{Stem age of Nassauvieae:} 16.0--125 Ma. The lower
+  bound was set by the earliest fossil pollen of Nassauvieae,
+  \textit{Huanilipollis cabrerii}, from early Miocene sediments in
+  South America \citep{Barreda2008,Barreda2010}. It is similar to
+  pollen of recent \textit{Holocheilus}, \textit{Jungia}, and
+  \textit{Proustia}, being subprolate, tricolporate, microechinate and
+  with a complex exine structure \citep{Barreda2008}.
+
+\item \textbf{Stem age of Cichorieae excluding Scorzonerinae:}
+  22.0--125 Ma. The lower bound is based on the earliest confirmed
+  fossil pollen of Cichorieae, \textit{Cichorium intyubs}-type pollen
+  from the Molasse of the Paratethys, which is at least 22 Ma old
+  \citep{Hochuli1978}. The pollen has three poral lacunae, six abporal
+  lacunae (three at each side of the equator), and six paraporal
+  lacunae (three on each side of the equatorial ridge)
+  \citep{Blackmore1984}, a trait combination widely distributed in all
+  subtribes except Scorzonerinae \citep{Tremetsberger2013}.
+
+\item \textbf{Stem age of \textit{Sonchus} + \textit{Launaea}:}
+  5.4--125 Ma. The lower bound is based on \textit{Sonchus
+    oleraceus}-type pollen from the Late Miocene, which resembles that
+  of extant \textit{Aetheorhiza}, \textit{Hyoseris}, \textit{Launaea},
+  and \textit{Sonchus} \citep{Blackmore1986}. Our sampling included
+  only the latter two genera.
+
+\end{enumerate}
+
+\noindent The constraints for the
+\textit{Ligularia-Cremanthodium-Parasenecio} complex and
+\textit{Saussurea} below are based on 95\% HPD intervals inferred from
+this backbone.
+
+\subsubsection*{Ingroup: \textit{Ligularia-Cremanthodium-Parasenecio}
+  complex; outgroup scope: Tussilagininae}
+
+\begin{enumerate}
+
+\item \textbf{Root age:} 9.5--29.8 Ma.
+
+\item \textbf{Crown age of \textit{Ligularia}:} 2.32--16.85 Ma.
+
+\item \textbf{Crown age of \textit{Petasites} + \textit{Tussilago}}:
+  1.09--15.18 Ma.
+
+\end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Saussurea}; outgroup scope:
+  Cardueae}
+
+\begin{enumerate}
+\item \textbf{Crown age of \textit{Saussurea}:} 2.27--13.98 Ma. % INGROUP??
+\end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Cyananthus}; outgroup scope:
+  Campanulaceae}
+
+\begin{enumerate}
+
+\item \textbf{Root (crown age of Campanulaceae):} 62--90 Ma. The
+  bounds equal the 95\% HPD interval of the crown age of Campanulaceae
+  inferred in \cite{Magallon2015}.
+
+\item \textbf{Stem age of the most recent common ancestor of
+    \textit{Campanula pyramidalis} and \textit{C.~carpatica}:}
+  16.5--62 Ma. The bounds are based on fossils of
+  \textit{C.~palaeopyramidalis} \citep{Lancucka-Srodoniowa1979} which
+  were assigned to \textit{C. pyramidalis} in \cite{Cellinese2009}.
+\end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Rhododendron}; outgroup context: Ericaceae}
+
+% We used fossil calibrations for Ericaceae following
+% \citet{Schwery2015} with some modifications.
+% We constrained the stem
+% age rather than the crown age of Rhododendron using the earliest
+% fossil of this genus. This because the earliest fossil cannot be
+% assigned to any subgenus based on morphological characters. We applied
+% the earliest fossil record of Ericaceae (89.8 Myr) to be the maximum
+% age of other calibrations in the Ericaceae.
+
+\begin{enumerate}
+
+\item \textbf{Root (crown age of Ericaceae):} 89.8--125 Ma. The lower
+  bound is based on the earliest fossil record of Ericaceae,
+  \textit{Paleoenkianthus sayrevillensis} \citep{Nixon1993}. We also
+  used this age as the upper bound for the following constraints
+  within the family.
+
+\item \textbf{Stem age of \textit{Rhododendron}:} 56--89.8 Ma. The
+  lower bound is the earliest fossil record of the genus,
+  \textit{R.~newburyanum} from the Paleocene of South England
+  \citep{Collinson1978}.
+
+\item \textbf{Stem age of \textit{Erica}:} 5.33--89.8 Ma. The lower
+  bound is based on the earliest fossil record of the genus,
+  \textit{E.~palaeoarborea} from the late Miocene of Europe
+  \citep{VanderBurgh1987}.
+
+\item \textbf{Stem age of \textit{Empetrum}:} 11.62--89.8 Ma. The
+  lower bound is based on the earliest fossil record of the genus,
+  from the middle Miocene of Denmark \citep{Friis1979}.
+
+\item \textbf{Stem age of \textit{Kalmia}:} 15.97--89.8 Ma. The lower
+  bound is based on the earliest fossil record of the genus,
+  \textit{K.~saxonica} from the early Miocene of Germany
+  \citep{VanderBurgh1987}.
+
+\end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Isodon}; outgroup context: Lamiaceae}
+
+The following constraints are based on 95\% HPD intervals for node
+ages from the fossil-calibrated study by \citet{Yu2014}.
+
+\begin{enumerate}
+\item \textbf{Stem age of \textit{Isodon}:} 17.03--39.84 Ma.
+\item \textbf{Crown age of \textit{Isodon}:} 14.66--26.44 Ma.
+\end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Meconopsis}; outgroup context:
+  Papaveraceae}
+
+\begin{enumerate}
+\item \textbf{Crown age of \textit{Meconopsis}:} 12--34 Ma. The bounds
+  are based on the 95\% HPD interval for the node estimated in a study
+  by \citet{Xiao2013}, which used fossil calibrations from other taxa
+  in Ranunculales.
+\end{enumerate}
+
+\subsubsection*{Ingroup: Pinaceae}
+
+\smalltodo[inline]{The BEAST XML file includes ``Abies-Cedrus.prior''
+  which includes Keteleeria, Nothotsuga, Tsuga, and Pseudolarix as a
+  monophyletic constraint? Also, how was this rooted with no
+  outgroups?}
+
+\begin{enumerate}
+\item \textbf{Root (crown age of Pinaceae):} 152--200 Ma. The lower
+  bound is based on the earliest fossil cone assigned to Pinaceae,
+  \textit{Eathiestrobus} \citep{Rothwell2012}. The upper bound is
+  based on the absence of Pinaceae fossils before the
+  Jurassic.% We placed three fossil calibrations in Pinaceae selected
+  % by Leslie et al. \citep{Leslie2012}. We also followed their settings
+  % of the lower and upper bounds \citep{Leslie2012}, but use uniform
+  % priors.
+
+\item \textbf{Stem age of \textit{Larix}:} 41--60 Ma. The bounds
+  follow \citet{Leslie2012}. The lower bound is based on the earliest
+  reliable fossil of \textit{Larix}, \textit{L.~altoborealis} from the
+  middle Eocene of Canada \citep{LePage1991}.
+
+\item \textbf{Stem age of \textit{Picea}:} 133--153 Ma. The bounds
+  follow \citet{Leslie2012}. The lower bound is based on \textit{Picea
+    burtonii}, the earliest reliable fossil of \textit{Picea} from the
+  Early Cretaceous Apple Bay locality in British Columbia
+  \citep{Klymiuk2012}.
+
+\item \textbf{Stem age of \textit{Tsuga}:} 41--90 Ma. The bounds
+  follow \citet{Leslie2012}. The lower bound is based on \textit{Tsuga
+    swedaea} from the middle Eocene Buchanan Lake formation, Axel
+  Heiberg Island \citep{Lepage2003}.
+
+\end{enumerate}
+
+\subsubsection*{Ingroup: Polygoneae; outgroup context:
+  Polygonaceae+Plumbaginaceae}
+
+\begin{enumerate}
+
+\item \textbf{Stem age of Polygonaceae:} 65.5--125 Ma. The lower bound
+  is based on the fossil fruit \textit{Polygonocarpum johnsonii} from
+  the Maastrichtian of North Dakota, which exhibits wing venation
+  patterns known only in Polygonaceae \citep{Manchester2010}.
+
+\item \textbf{Stem age of \textit{Polygonum}:} 28.1--125 Ma. The
+  lower bound is based on the earliest fossil record of
+  \textit{Polygonum} from the early Oligocene of western Siberia
+  \citep{Dorofeev1963}.
+
+\item \textbf{Stem age of \textit{Persicaria}:} 55.8--125 Ma. The
+  lower bound is based on several \textit{Persicaria}-type pollen
+  fossils reported from the Paleocene of Europe
+  \citep{Krutzsch1970,Gruas1978} and accepted by \citet{Muller1981}.
+
+\item \textbf{Stem age of \textit{Rumex}:} 16--125 Ma. The lower
+  bound is based on seed and fruit fossils of the genus from the
+  middle Miocene of Germany \citep{Mai2001}.
+
+\item \textbf{Crown age of \textit{Muehlenbeckia}:} 12.7--125 Ma. The
+  lower bound is based on the 12.7 Ma fossil of the extant species
+  \textit{M.~australis} from New Zealand
+  \citep{Pole1993,Schuster2013}.
+
+\end{enumerate}
+
+\subsubsection*{Ingroup: Microsoroideae; outgroup context:
+  Polypodiaceae}
+
+% One hundred and seventy-nine species from Polypodiaceae were selected
+% as outgroups.
+
+\begin{enumerate}
+\item \textbf{Root (crown age of Polypodiaceae):} 33.9--77 Ma. The
+  lower bound is based on the earliest uncontroversial fossil of
+  Polypodiaceae, \textit{Protodrynaria takhtajanii} from the Eocene of
+  Siberia \citep{Vikulin1987}. The maximum bound is based on a
+  secondary calibration, the upper bound of the 95\% HPD for the crown
+  age of polygrammoids \citep{Schuettpelz2009}.
+
+\item \textbf{Crown age of \textit{Drynaria}:} 5.3--66 Ma. The lower
+  bound is based on a fossil of the extant species
+  \textit{D.~propinqua} from the late Miocene of SW China
+  \citep{Wen2013}. The upper bound is based on the assumption that the
+  genus is unlikely to have originated before the Cenozoic.
+
+\item \textbf{Stem age of \textit{Polypodium}:} 25.6--66 Ma. The
+  lower bound is based on the earliest fossil record of the genus
+  from the early Oligocene of Czech Republic \citep{Kvacek2001}. The
+  upper bound is based on the assumption that the genus is unlikely to
+  have originated before the Cenozoic.
+
+\item \textbf{Stem age of Pleopeltis:} 15.8--66 Ma. The lower bound
+  is based on the oldest reliable fossil of the genus, from the
+  Miocene of the Dominican Republic \citep{Schneider2015}. The upper
+  bound is based on the assumption that the genus is unlikely to have
+  originated before the Cenozoic.
+\end{enumerate}
+
+\subsubsection*{Ingroup: Primuloideae; outgroup context: Primulaceae
+  sensu lato}
+
+% We expanded our sampling to the whole Primulaceae (s. l.). Five
+% fossils were used as calibrations in dating the Primulaceae
+% phylogeny. 
+
+The upper bound for all constraints is based on the earliest fossil
+flowers of {\color{red}primuloids} from the Late Cretaceous
+(Campanian-Maastrichtian) Mira locality of Portugal \citep{Friis2011}.
+
+\smalltodo[inline]{Explain this maximum bound -- what are ``primuloids''?}
+
+\begin{enumerate}
+\item \textbf{Root (crown age of Primulaceae):} 48.6--72 Ma. The lower
+  bound is based on the earliest fossil record of Primulaceae, from
+  the early Eocene London Clay Formation and assigned to
+  \textit{Ardisia} \citep{Collinson1984}. Fossils of Myrsinoideae have
+  also been reported from the early Eocene United States
+  \citep{Irving1971}.
+
+\item \textbf{Stem age of Primuloideae (Primulaceae s.s.):} 28--72
+  Ma. The lower bound is based on the earliest fossils of
+  Primuloideae, from the early Oligocene of Siberia
+  \citep{Nikitin2006}.
+
+\item \textbf{Stem age of \textit{Primula}:} 15.96--72 Ma. The lower
+  bound is based on the earliest unequivocal fossil of
+  \textit{Primula}, \textit{P.~riosiae} \citep{deVos2014}.
+
+\item \textbf{Stem age of \textit{Androsace}:} 5.3--72 Ma. The lower
+  bound is based on the earliest fossil seed of \textit{Androsace},
+  from the Miocene of western Siberia \citep{Dorofeev1963}.
+\end{enumerate}
+
+\subsubsection*{Ingroups: Delphineae, \textit{Clematis}, and
+  \textit{Thalictrum}; outgroup context: Ranunculaceae}
+
+Divergence times for these ingroups were estimated in separate
+analyses that shared a common set of calibrations.
+
+\begin{enumerate}
+\item \textbf{Root (crown age of Ranunculaceae):} 93.9--125 Ma. The
+  lower bound is based on pollen of \textit{Cretacaeisporites
+    scabratus} from the Cretaceous (probably Late Cenomanian) of Gabon
+  \citep{Ward1994}.
+
+\item \textbf{Stem age of \textit{Actaea}:} 56.8--125 Ma. The lower
+  bound is based on fossil fruits (\textit{Paleoactaea nagelii}) from
+  the late Paleocene of North Dakota \citep{Pigg2005}.
+
+\item \textbf{Stem age of \textit{Clematis}:} 23--125 Ma. The lower
+  bound is based on fossil fruits of the genus from the Oligocene of
+  Germany \citep{Weyland1938}.
+
+\item \textbf{Stem age of \textit{Caltha}:} 70.6--125 Ma. The lower
+  bound is based on fossil \textit{Eocaltha zoophilia} from the
+  Campanian of Mexico \citep{Rodriguez1998}.
+
+\item \textbf{Stem age of \textit{Ranunculus}:} 23--125 Ma. The
+  lower bound is based on fossil fruits of the genus from the
+  Oligocene \citep{Mai1985}.
+
+\end{enumerate}
+
+% We applied all fossil calibrations used for the Delphinae in dating
+% Clematidinae-Anemoninae and Thalictroideae. Besides above fossil
+% calibrations, we added two more calibrations. We used Eocaltha
+% zoophilia from the Campanian of Mexico which show similarity to seeds
+% of extant Caltha to constrain the stem age of Caltha
+% \citep{Rodriguez1998}. The stem age of Caltha was set to 70.6--125
+% Myr. We applied the Oligocene Ranunculus fossil fruits to constrain
+% the stem age of this genus \citep{Mai1985}. The stem age of Ranunculus
+% was set to 23--125 Myr.
+
+\subsubsection*{Ingroup: \textit{Rosa}; outgroup context: Rosales}
+
+% Rosales has very good fossil record among all the angiosperms
+% \citep{Xing2016}. To incorporate more fossil calibrations, we selected
+% 203 taxa from other genera of Rosaceae and four species of Rhamnaceae
+% as outgroup.
+
+\begin{enumerate}
+\item \textbf{Root (age of split between Rosaceae and Rhamnaceae):}
+  70--125 Ma. The lower bound is based on the oldest fossil flower
+  of Rhamnaceae, \textit{Coahuilathus belindae}, from the late
+  Campanian of Mexico \citep{Calvillo-Canadell2007}.
+
+\item \textbf{Crown age of subfamily Spiraeoideae excluding
+    \textit{Lyonothamnus}, supertribe Kerriodae, and tribe Neilieae):}
+  49.4--125 Ma. The lower bound is based on the earliest fossil of
+  Spiraeoideae, \textit{Paleorosa} from the middle Eocene of British
+  Colombia \citep{Basinger1976}.
+
+\item \textbf{Crown age of Amygdaleae:} 49.4--125 Ma. The lower
+  bound is based on a fossil of \textit{Prunus} from the middle Eocene
+  \citep{DeVore2007}.
+
+\item \textbf{Crown age of tribe Kerriae:} 49.4--125 Ma. The lower
+  bound is based on the earliest fossil record for the tribe, assigned
+  to the genus \textit{Neviusia}, from the middle Eocene of British
+  Columbia \citep{DeVore2004}.
+
+\item \textbf{Stem age of \textit{Rosa}:} 34--125 Ma. The lower bound
+  is based on the earliest fossil record of the genus, from the late
+  Eocene Florissant Formation \citep{Manchester2001}.
+\end{enumerate}
+
+\subsubsection*{Ingroup: \textit{Acer}; outgroup context: Sapindaceae}
+
+% The analysis included 118 ingroup species and 2 outgroups,
+% \textit{Dipteronia dyeriana} and \textit{D.~sinensis}.
+
+\begin{enumerate}
+
+\item \textbf{Stem age of \textit{Dipteronia}:} 60--125 Ma. The
+  lower bound is based on the earliest fossil of
+  \textit{Dipteronia}, winged fruits from the Paleocene of North
+  America \citep{McClain2001}.
+
+\item \textbf{Crown age of \textit{Acer}:} 47.8--125 Ma. \textit{Acer}
+  has a rich fossil record, dating to at least the Paleocene
+  \citep{Wolfe1987,Mai1995}. We based the lower bound on the crown age
+  on the first fossil samaras assignable to \textit{Acer} section
+  \textit{Acer}, from the latest Early Eocene of North America
+  \citep{Wolfe1987}.
+
+\end{enumerate}
+
+\subsubsection*{Ingroups: \textit{Rhodiola} and
+  Saxifragaceae+Grossulariaceae; outgroup context: Saxifragales}
+
+The ingroups were analyzed separately using a common set of
+calibrations.
+
+\begin{enumerate}
+\item \textbf{Root (crown age of Saxifragales):} 90--125 Ma. The lower
+  bound is based on the Turonian fossil \textit{Divisestylus}, which
+  shows flowers and fruits with well-preserved morphological
+  characters that indicate a clear affinity to Iteaceae
+  \citep{Hermsen2003}.
+
+\item \textbf{Stem age of \textit{Itea}:} 49--125 Ma. The lower
+  bound is based on the earliest fossil pollen assigned to \emph{Itea}
+  \citep{Hermsen2013}.
+
+\item \textbf{Stem of Ribes:} 42--125 Ma. The lower bound is based
+  on the earliest uncontroversial fossil leaves assigned to
+  \textit{Ribes axelrodii} from the Eocene Bull Run floras
+  \citep{Hermsen2005}.
+\end{enumerate}
+
+\subsection*{Geographic range data}
+
+Regional presence-absence matrices for ingroup species (Dataset S1)
+were assembled from the following sources:
+
+\begin{enumerate}
+\item Flora of China
+  (\href{http://www.efloras.org/flora_page.aspx?flora_id=2}{http://www.efloras.org/flora\_page.aspx?flora\_id=2})
+\item Flora of North
+  America (\href{http://floranorthamerica.org}{http://floranorthamerica.org})
+\item Flora of Pakistan
+  (\href{http://www.efloras.org/flora\_page.aspx?flora\_id=5}{http://www.efloras.org/flora\_page.aspx?flora\_id=5})
+\item EURO+MEDI PlantBase
+  (\href{http://www.emplantbase.org}{http://www.emplantbase.org})
+\item USDA (\href{http://plants.usda.gov}{http://plants.usda.gov})
+\item Annotated Checklist of the Flowering Plants of Nepal
+  (\href{http://www.efloras.org/flora\_page.aspx?flora\_id=110}{http://www.efloras.org/flora\_page.aspx?flora\_id=110})
+\item Global Biodiversity Information Facility
+  (\href{http://www.gbif.org}{http://www.gbif.org})
+\item Biodiversity of the Hengduan Mountains
+  (\href{http://hengduan.huh.harvard.edu}{http://hengduan.huh.harvard.edu})
+\item A county-level occurrence data set for vascular plants of the
+  Hengduan Mountains \citep{Zhang2009,Wu2008}
+\end{enumerate}
+
+\clearpage
+\newpage
+\input{SI-table1}
+\clearpage
+\newpage
+\input{SI-figure-regions}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "SI"
+%%% End:
