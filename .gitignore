@@ -6,3 +6,5 @@ auto/*
 *.log
 *.pdf
 *~
+*.out
+*.xwm
