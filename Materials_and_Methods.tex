@@ -122,25 +122,29 @@ histories.% Further details are provided in the \textit{SI Materials and Methods
 To complement the regional-process analysis and to better understand
 heterogeneity in rates of lineage diversification independently of
 geography, we generated Bayesian inferences of diversification rate
-for each clade using BAMM version 2.5 \citep{Rabosky2014}, which uses
-Markov chain Monte Carlo procedures to jointly estimate the number,
-parameters, and locations of distinct macroevolutionary regimes (rates
-of lineage birth and death, possibly time-dependent) on a phylogenetic
-tree. BAMM is able to account statistically for incomplete taxon
-sampling, so we assigned sampling fractions at the finest level of
-taxonomic resolution possible: this was generally at the level of
-genus, but at the level of section for \textit{Rhododendron} and
-\textit{Acer}. In cases where genera were not confidently resolved as
-monophyletic, we assigned sampling fractions at higher taxonomic
-levels (tribe and subfamily). We ran each BAMM MCMC analysis for 50
-million generations with a sampling frequency of 1/1000 and assessed
-convergence by visually inspecting plots of the likelihood trace and
-calculating the effective sample size after discarding the first 10\%
-of the run as burn-in. For each clade, we calculated Bayes factors for
-the distinct numbers of regime shifts sampled, marginal odds ratios
-(relative evidence in favor of a shift) for individual branches, and
-the 95\% credible set of distinct shift configurations, using the
-BAMMtools R package \citep{Rabosky2014}.
+for each clade using BAMM version 2.5 and the BAMMtools R package
+\citep{Rabosky2014}. BAMM uses Markov chain Monte Carlo procedures to
+jointly estimate the number, parameters, and locations of distinct
+macroevolutionary regimes (rates of lineage birth and death, possibly
+time-dependent) on a phylogenetic tree. It is able to account
+statistically for incomplete taxon sampling, so we assigned sampling
+fractions at the finest level of taxonomic resolution possible: this
+was generally at the level of genus, but at the level of section for
+\textit{Rhododendron} and \textit{Acer}. In cases where genera were
+not confidently resolved as monophyletic, we assigned sampling
+fractions at higher taxonomic levels (tribe and subfamily). Priors for
+speciation and extinction were set empirically using the
+\textrm{setBAMMpriors} function. All clades were smaller than 500
+sampled tips, so the prior on the expected mean number of regime
+shifts was set to 1, as recommended in the BAMM documentation. We ran
+each BAMM MCMC analysis for 50 million generations with a sampling
+frequency of 1/1000 and assessed convergence by visually inspecting
+plots of the likelihood trace and calculating the effective sample
+size after discarding the first 10\% of the run as burn-in. For each
+clade, we calculated Bayes factors for the distinct numbers of regime
+shifts sampled, marginal odds ratios (relative evidence in favor of a
+shift) for individual branches, and the 95\% credible set of distinct
+shift configurations.
 
 %%% Local Variables:
 %%% mode: latex
