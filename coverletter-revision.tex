@@ -14,13 +14,16 @@
 \usepackage{geometry}
 \geometry{verbose,tmargin= 1.5in,bmargin= 1.5in,
           lmargin= 1in,rmargin= 1in}
-
 % If the letter doesn't fit on one page, but you
 % want it do, remove the ``%'' on the next line:
 % \setlength{\textheight}{8in}
 
+\usepackage{enumitem}
+\setlist{parsep=1em}
+
 \begin{document}
 \raggedright{}
+
 % If you want headings on subsequent pages,
 % remove the ``%'' on the next line:
 % \pagestyle{headings}
@@ -130,7 +133,7 @@ detailed below.
 \item \textit{P4, column 1, lines 399-401. These statements about the
     Cerrado are over-simplifications.}
 
-  \textit{ First, the idea of "colonization" with its implication of
+  \textit{First, the idea of "colonization" with its implication of
     some form of geographical dispersal from adjacent areas, may not
     apply in the case of the Cerrado, where more likely Cerrado
     lineages simply adapted from ancestral forest lineages to tolerate
@@ -191,7 +194,9 @@ detailed below.
   version corrected the only concern of Moore et al.\ that is relevant
   to this study: the sensitivity of the inferred number of rate shifts
   to the prior. We now state the prior we used (XXX), which follows
-  the recommendation in the BAMM documentation.
+  the recommendation in the BAMM documentation: a geometric
+  distribution with rate parameter $\gamma = 1$ for clades smaller
+  than 500 tips.
 
   The other issues raised in the Moore et al.\ paper are indeed
   controversial and do not provide any basis for thinking that our
@@ -264,6 +269,8 @@ detailed below.
 \item \textit{Table S1. It looks as though the columns for total and
     sampled species for the temperate/boreal east Asian taxa have been
     reversed. Please check and rectify.}
+
+Fixed.
 
 \item \textit{Significance Statement, last sentence better: prevalence
     of mountains as global biodiversity hotspots.}
