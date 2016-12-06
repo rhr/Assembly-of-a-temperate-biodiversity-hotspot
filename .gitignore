@@ -8,3 +8,5 @@ auto/*
 *~
 *.out
 *.xwm
+_region_.tex
+!figures/*.pdf
