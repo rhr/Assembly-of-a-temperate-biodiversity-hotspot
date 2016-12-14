@@ -68,7 +68,8 @@ detailed below.
     acknowledged, and the possible sensitivity of the results to where
     this boundary is placed discussed in the paper.}
 
-
+  We have added a paragraph to the end of the Discussion that
+  addresses this issue.
 
 \item \textit{P3, column 2, para 2. Is it really precise enough to
     describe the possible greater Pleistocene survival in the Hengduan
@@ -191,19 +192,29 @@ detailed below.
 
   We used BAMM version 2.5, the current version when the analyses were
   run (December 2015), and have clarified this in the text (XXX). That
-  version corrected the only concern of Moore et al.\ that is relevant
-  to this study: the sensitivity of the inferred number of rate shifts
-  to the prior. We now state the prior we used (XXX), which follows
-  the recommendation in the BAMM documentation: a geometric
-  distribution with rate parameter $\gamma = 1$ for clades smaller
-  than 500 tips.
+  version corrected the only issue raised by Moore et al.\ that is
+  relevant to this study: the apparent sensitivity of the inferred
+  number of rate shifts to the prior. We now state the priors we used
+  (XXX): for all clades, we set \texttt{expectedNumberOfShifts = 1};
+  and for those larger than 500 total species (\textit{Allium},
+  Delphineae, Polygoneae, Primulaceae, \textit{Rhododendron}, and
+  Grossulariaceae; Table S1) we also tested
+  \texttt{expectedNumberOfShifts = 10}. There were no substantial
+  differences so we report the results for the more conservative
+  prior, \texttt{expectedNumberOfShifts = 1}.
 
-  The other issues raised in the Moore et al.\ paper are indeed
-  controversial and do not provide any basis for thinking that our
-  BAMM results are systematically biased. The main question would be
-  whether they failed to reveal shifts that are in fact supported by
-  the data---shifts that potentially are associated with geographic
-  occupancy. There is no reason to suspect this to be the case.
+  The other issues raised in the Moore et al.\ paper do not provide
+  any reason to think that our BAMM results are systematically biased
+  with respect to our hypothesis. The main question would be whether
+  they failed to reveal shifts that are in fact supported by the
+  data---shifts that potentially are associated with geographic
+  occupancy. We cannot see any reason to suspect this to be the case.
+
+  Since the BAMM results are largely uninformative with respect to the
+  goals of our study, and (as we argue in the text) the method does
+  not appear not very well-suited to the data (due to the general
+  scarcity of endemic radiations), we do not feel it is necessary to
+  call attention to the Moore et al.\ controversy in the main text.
 
 \item \textit{Methods - estimating diversification rates. It is stated
     that assignment of unsampled diversity for Rhododendron and Acer
@@ -254,6 +265,11 @@ detailed below.
     of Pinaceae diversity is found. Looks like there is a mistake
     here.}
 
+  Thank you for catching this, it arose from an error in one of the
+  scripts we wrote to automate running the analyses and making the
+  figures. We have re-created all the reconstruction figures and the
+  Pinaceae figure is corrected.
+
 \item \textit{The diversification rate estimates and lack of any rate
     shifts for Primulaceae do not coincide with the previous analysis
     of this family by de Vos et al 2014. Proc Royal Soc B 281. Please
@@ -261,6 +277,27 @@ detailed below.
     notes on fossil constraints included in supporting information,
     notes about the results of the individual BAMM analyses should
     also be included to clarify issues like the Primulaceae example.}
+
+  The BAMM estimates of net diversification rate depicted in Figure
+  SXXX suggest that across most of the phylogeny, the rate is between
+  about 0.15 and 0.2. This is not very different from the rates found
+  by MEDUSA in de Vos et al.\ Figure 2, if you consider the 2 largest
+  partitions where the values are 0.08 and 0.28, respectively.
+
+  The reasons why BAMM does not find strong support for a shift in
+  rates is a difficult question to answer because (1) our tree was
+  different, as we sampled more species than de Vos et al. (354 vs.\
+  265), and (2) they did not use BAMM, but instead analyzed
+  diversification rates using MEDUSA, SymmeTREE, BiSSE, and
+  BayesRate. Of those methods, only MEDUSA and SymmeTREE are
+  comparable to BAMM in the sense of inferring the locations of rate
+  shifts without \textit{a priori} hypotheses---in the case of de Vos
+  et al., that faster diversification is associated with
+  heterostyly. But the methods are otherwise very different in their
+  model assumptions and algorithmic details. Unfortunately the
+  phylogeny from de Vos et al.\ is not available on TreeBASE (despite
+  what is stated in the paper) so we are unable to analyze it with
+  BAMM for comparison.
 
 \item \textit{None of the phylogenetic analyses include any indication
     of levels of support. It is certain that in many cases there is
@@ -270,21 +307,43 @@ detailed below.
     the phylogenies and some discussion of this issue included under
     methods.}
 
+  We do not indicate clade support in any tree figures because they
+  are already visually cluttered, showing reconstructed ancestral
+  ranges and diversification rates. In the text, it did not seem
+  necessary to discuss clade support because our analyses were
+  designed explicitly to account for phylogenetic uncertainty by
+  making biogeographic inferences from replicated draws from the
+  posterior distributions of trees for each clade. This is explained
+  in Methods sections ``Ancestral range reconstruction'' and
+  ``Regional assembly processes through time'', which we have edited
+  to make this clearer. Our results thus do not condition on any
+  particular topologies or branch lengths, and reflect the levels of
+  clade support (and confidence in divergence times) provided by the
+  sequence data.
+
 \item \textit{Table S1. It looks as though the columns for total and
     sampled species for the temperate/boreal east Asian taxa have been
     reversed. Please check and rectify.}
 
-Fixed.
+  We have fixed this error.
 
 \item \textit{Significance Statement, last sentence better: prevalence
     of mountains as global biodiversity hotspots.}
 
+  We made this change.
+
 \item \textit{P1, line 77, omit 'quite'}
+
+  We made this change.
 
 \item \textit{P1, line 96 better: .... in situ diversification has
     been clearly favored......}
 
+  We made this change.
+
 \item \textit{21. FigS2F appears twice}
+
+  We have fixed this error.
 
 \end{enumerate}
 
@@ -301,9 +360,25 @@ Fixed.
     different colonization strategies. Removing them from the analyses
     as an alternative seems important for the comparative analyses.}
 
+  We redid the biogeographic analyses with only angiosperms (the 16
+  original clades plus \textit{Lilium}, see below) and present them in
+  Figures SXXX. The results do not change. The only appreciable
+  difference is that the time scale of biogeographic events is
+  shortened, as the earliest biogegraphic events, from about 180--100
+  Ma, are all in Pinaceae.
+
 \item \textit{The authors treated the Qinghai-Tibetan Plateau (QTP)
     and the Himalayas as one biogeographic area of endemism. I would
     like to see results of treating them separately.}
+
+  Despite the uncertainty and scarcity of information needed to
+  distinguish the Himalayas and QTP proper in terms of plant species
+  distributions, we recoded our data set, treating them as separate
+  areas. We scored 210 out of 4,668 species (4.5\%) as occurring in
+  the QTP. We then generated new ancestral range reconstructions and
+  estimated rates of dispersal and \textit{in situ} diversification
+  through time. The results are summarized in Figures SXXX. They show
+  that
 
 \item \textit{The QTP-Himalayas-Hengduan Mountains have received so
     much attention in the last few years. Some lineages seem to have
