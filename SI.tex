@@ -24,7 +24,8 @@
 %\sectionfont{\nohang\centering\normalsize\sc}   % capitalize initial letters
 %\subsectionfont{\nohang\centering\normalsize\rm\em}
 \usepackage{enumitem}
-
+\usepackage{lineno}
+\renewcommand\linenumberfont{\normalfont\small}
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand\thesubsection{\arabic{subsection}}
@@ -46,7 +47,7 @@
 \begin{document}
 \raggedright
 \parindent 0.5in
-
+\linenumbers
 \input{SI-content}
 
 \clearpage

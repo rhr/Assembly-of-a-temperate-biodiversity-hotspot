@@ -34,7 +34,7 @@ least-inclusive taxon containing the ingroup and outgroup
 taxa. Included in the list are fossil-calibrated ``backbone'' analyses
 that we ran to derive secondary calibrations for some ingroups. A
 spreadsheet containing taxon-by-gene tables of Genbank accession
-numbers for all analyses is available as Dataset S2.
+numbers for all analyses is available as Dataset S1.
 
 \todo[inline]{\textit{Note to editor: BEAST XML files (containing the aligned
   sequence data, Bayesian priors, and analysis directives) and the
@@ -505,8 +505,8 @@ calibrations.
 
 \subsection*{Geographic range data}
 
-Regional presence-absence matrices for ingroup species (Dataset S1)
-were assembled from the following sources:
+Regional presence-absence matrices for ingroup species (Datasets S2
+and S3) were assembled from the following sources:
 
 \begin{enumerate}
 \item Flora of China
@@ -528,6 +528,34 @@ were assembled from the following sources:
   Hengduan Mountains \citep{Zhang2009,Wu2008}
 \end{enumerate}
 
+\subsection*{Additional analyses of biotic assembly}
+
+We assessed the robustness of our results to 2 factors: (1) the
+treatment of the Himalayas and QTP as a single biogeographic area, and
+(2) the inclusion of non-angiosperms (the conifer clade Pinaceae and
+the fern clade Microsoroideae) in estimates of assembly dynamics.
+
+\begin{enumerate}
+\item We recoded the species range data, treating the Himalayas and
+  QTP as separate areas (Figure 1; Dataset S3). We scored 210 out of
+  the 4,668 species (4.5\%) as occurring in the QTP. We then generated
+  new ancestral range reconstructions, and estimated rates of
+  dispersal and \textit{in situ} diversification through time, as
+  described in Materials and Methods. The results, summarized in
+  Figures \ref{fig:cumevents:qtp}--\ref{fig:dispersal:qtp}, are
+  virtually identical to the original results with respect to Hengduan
+  assembly dynamics.
+
+\item Using the original Himalayas-QTP coding, we estimated rates of
+  dispersal and \textit{in situ} diversification through time using
+  only the 17 clades of angiosperms and present them in Figures
+  \ref{fig:cumevents:angios}--\ref{fig:dispersal:angios}. The results
+  do not change. The only appreciable difference is that the time
+  scale of biogeographic events is shortened, as the earliest
+  biogegraphic events, from about 180--100 Ma, are all in Pinaceae.
+
+\end{enumerate}
+
 \subsection*{BAMM analyses of diversification rate}
 
 \subsubsection*{Sampling fractions}
@@ -544,8 +572,9 @@ was possible at the level of section for \textit{Rhododendron}
 however, infrageneric classifications were sufficiently incongruent
 with phylogeny as to require the use of global sampling
 fractions. This was the case for \textit{Allium} \citep{li2010},
-\textit{Rosa} \citep{bruneau2007}, \textit{Saussurea}
-\citep{wang2009}, and \textit{Thalictrum} \citep{soza2012}.
+\textit{Lilium} \citep{gao2013}, \textit{Rosa} \citep{bruneau2007},
+\textit{Saussurea} \citep{wang2009}, and \textit{Thalictrum}
+\citep{soza2012}.
 
 \subsubsection*{Comparisons with previous studies}
 
