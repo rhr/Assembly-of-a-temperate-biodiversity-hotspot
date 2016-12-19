@@ -135,17 +135,18 @@ time-dependent) on a phylogenetic tree. It can account statistically
 for incomplete taxon sampling, so we assigned sampling fractions at
 the finest level of taxonomic resolution possible (see \textit{SI
   text}). Priors for speciation and extinction were set empirically
-using the \textrm{setBAMMpriors} function. All clades were smaller
-than 500 sampled tips, so the geometric prior on the expected number
-of regime shifts was parameterized by $\gamma = 1$, as recommended in
-the BAMM documentation. We ran each BAMM MCMC analysis for 50 million
-generations with a sampling frequency of 1/1000 and assessed
-convergence by visually inspecting plots of the likelihood trace and
-calculating the effective sample size after discarding the first 10\%
-of the run as burn-in. For each clade, we calculated Bayes factors for
-the distinct numbers of regime shifts sampled, marginal odds ratios
-(relative evidence in favor of a shift) for individual branches, and
-the 95\% credible set of distinct shift configurations.
+using the \textrm{setBAMMpriors} function. For all clades smaller than
+500 species, we set the geometric prior on the expected number of
+regime shifts to 1, as recommended in the BAMM documentation; for
+larger clades we also tested a prior of 10 expected shifts. We ran
+each BAMM MCMC analysis for 10 million generations with a sampling
+frequency of 1/1000 and assessed convergence by visually inspecting
+plots of the likelihood trace and calculating the effective sample
+size after discarding the first 10\% of the run as burn-in. For each
+clade, we calculated Bayes factors for the distinct numbers of regime
+shifts sampled, marginal odds ratios (relative evidence in favor of a
+shift) for individual branches, and the 95\% credible set of distinct
+shift configurations.
 
 %%% Local Variables:
 %%% mode: latex
