@@ -1,0 +1,138 @@
+% LaTeX Template for a Letter or Correspondence
+% 
+% To use:
+%
+% Copy into a new file, replace all
+% [BRACKETED UPPER CASE TEXT]
+% with your own, then run the latex command on it.
+% Use dvips to print the .dvi output
+\documentclass[11pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[unicode=true,colorlinks=true,urlcolor=blue,citecolor=black,linkcolor=black]{hyperref}
+\usepackage{geometry}
+\geometry{verbose,tmargin= 1.5in,bmargin= 1.5in,
+          lmargin= 1in,rmargin= 1in}
+% If the letter doesn't fit on one page, but you
+% want it do, remove the ``%'' on the next line:
+% \setlength{\textheight}{8in}
+
+\usepackage{enumitem}
+\setlist{parsep=0.5em,itemsep=1em}
+
+\begin{document}
+\raggedright{}
+
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{ \\
+
+}
+\address{Integrative Research Center\\
+  The Field Museum\\
+  1400 South Lake Shore Drive\\
+  Chicago, IL  60605-2496\\
+  USA}
+
+\opening{To the Editor:}
+
+Thank you for handling our revised submission. As suggested by
+Reviewer \#1, we have made further changes to (1) more clearly
+integrate the supplementary analysis that addresses the treatment of
+the Himalayas and QTP as a single biogeographic region, and (2) more
+comprehensively refer to the new Figure 1 (map of the focal regions).
+
+\textbf{Reviewer \#1:}
+
+\textit{The only significant issue that still needs to be addressed is
+  that the new analyses added treating the Himalaya and the QTP as
+  separate areas have not been properly described and integrated into
+  the manuscript in all the places where this is relevant.}
+
+\begin{quote}
+  Thank you for noticing this; we certainly agree and apologize for
+  this inattention to detail.
+\end{quote}
+
+\textit{ In lines 475-479 at the end of the discussion these
+  additional analyses are mentioned in relation to area
+  delimitation. However, these new analyses should also surely be
+  mentioned in: (i) para 2, page 3, lines 261-263 where the masking
+  effects of treating the older QTP and younger Himalaya as a single
+  region are mentioned, whereas this possible effect has now been
+  tested?}
+
+\begin{quote}
+  We have rewritten this paragraph (line 257) to clarify that
+  uplift-driven diversification in the Himalayas is not evident,
+  regardless of it being lumped with the QTP or not.
+\end{quote}
+
+\textit{(ii) Materials and Methods, para3, lines 673-677 where the
+  issue of treating the QTP and Himalaya as a single area is mentioned
+  and justified because available data on species ranges often lacked
+  sufficient detail to differentiate between the Himalaya and the
+  QTP. How does this tally and reconcile with the additional analysis
+  treating the QTP and Himalaya as separate areas?}
+
+\begin{quote}
+  We have rewritten the first 2 paragraphs of the section
+  ``Delimitation of biogeographic regions'' (line 661) to clarify our
+  rationale in focusing on the original analysis, in which the
+  Himalayas and QTP are combined, instead of the one treating them
+  separately. It boils down to confidence: for the latter analysis we
+  did our best to score species ranges using the available
+  information, but the process involved some guesswork. Moreover, the
+  original analysis is arguably simpler and more cleanly shows the
+  pattern of Hengduan assembly dynamics.
+
+  \vspace{6pt}
+
+  We have also inserted an introductory reference to this issue in the
+  first paragraph of Results, line 153, since this will precede the
+  Materials and Methods.
+\end{quote}
+
+\textit{The new Figure 1 is only sparsely referred to in the text and
+  should be cross-referenced in paras 2 and 3 on page 1 and in the
+  last paragraph of the discussion where the possible limitations of
+  these area delimitations are mentioned.}
+
+\begin{quote}
+  References to Figure 1 are now in the Introduction (lines 62, 90,
+  137) and Discussion (line 473).
+\end{quote}
+
+\textit{Methods, line 674, better: ... Our decision to treat the
+  Himalaya and QTP as a single unit for ...}
+
+\begin{quote}
+  We have rewritten this paragraph (see line 669) and removed this
+  phrasing.
+\end{quote}
+
+
+Thank you again handling our manuscript.
+
+%\signature{Richard Ree}
+
+\closing{Sincerely,\\
+  \bigskip
+  Richard Ree\\
+  +1 312-665-7857\\
+  rree@fieldmuseum.org\\
+  \medskip on behalf of co-author Yaowu Xing
+  }
+
+% \encl{[ENCLOSURE LISTING]}
+
+\end{letter}
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: tex-pdf
+%%% TeX-master: t
+%%% End: 
